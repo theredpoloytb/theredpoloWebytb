@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page HTML avec Animation</title>
+    <title>Page HTML avec Animation et Image</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            background-image: url('https://github.com/theredpoloytb/theredpoloWebytb/raw/main/image.png?raw=true');
+            background-size: cover; /* Ajuste la taille de l'image de fond pour couvrir tout l'écran */
+            background-position: center; /* Centre l'image de fond */
+            background-repeat: no-repeat; /* Évite la répétition de l'image de fond */
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
+        /* Animation de couleur pour le header et le footer */
+        header, footer {
+            animation: colorChange 3s infinite;
+        }
+
+        /* Définition de l'animation */
+        @keyframes colorChange {
+            0% {
+                background-color: red;
+            }
+            50% {
+                background-color: yellow;
+            }
+            100% {
+                background-color: red;
+            }
         }
 
         nav {
@@ -31,36 +46,18 @@
 
         section {
             margin: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Fond légèrement transparent pour mieux voir le texte */
+            padding: 20px;
+            border-radius: 10px; /* Ajoute des coins arrondis pour le conteneur de section */
         }
 
         footer {
-            background-color: #333;
             color: #fff;
             text-align: center;
             padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
-        }
-
-        /* Animation de couleur pour la section de compétences */
-        .animated-background {
-            animation: colorChange 3s infinite;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        /* Définition de l'animation */
-        @keyframes colorChange {
-            0% {
-                background-color: red;
-            }
-            50% {
-                background-color: yellow;
-            }
-            100% {
-                background-color: red;
-            }
         }
     </style>
 </head>
@@ -82,8 +79,7 @@
         <p>Je suis un étudiant passionné par la cybersécurité et le développement.</p>
         
         <h3>Compétences</h3>
-        <!-- Ajout de l'animation à cette section -->
-        <ul class="animated-background">
+        <ul>
             <li>Python</li>
             <li>HTML & CSS</li>
             <li>Cybersécurité</li>
