@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page HTML</title>
+    <title>Page HTML avec Animation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,23 +11,28 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #333;
             color: #fff;
             padding: 10px;
             text-align: center;
         }
+
         nav {
             margin: 20px;
         }
+
         nav a {
             margin-right: 15px;
             text-decoration: none;
             color: #333;
         }
+
         section {
             margin: 20px;
         }
+
         footer {
             background-color: #333;
             color: #fff;
@@ -37,13 +42,33 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Animation de couleur pour la section de compétences */
+        .animated-background {
+            animation: colorChange 3s infinite;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Définition de l'animation */
+        @keyframes colorChange {
+            0% {
+                background-color: red;
+            }
+            50% {
+                background-color: yellow;
+            }
+            100% {
+                background-color: red;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Bienvenue sur mon site</h1>
-        <p>Un simple site pour testé mes connaisance en HTML</p>
+        <p>Un simple site pour tester mes connaissances en HTML</p>
     </header>
 
     <nav>
@@ -57,13 +82,14 @@
         <p>Je suis un étudiant passionné par la cybersécurité et le développement.</p>
         
         <h3>Compétences</h3>
-        <ul>
+        <!-- Ajout de l'animation à cette section -->
+        <ul class="animated-background">
             <li>Python</li>
             <li>HTML & CSS</li>
             <li>Cybersécurité</li>
-            <li>hack ng</li>
-            <li>cheat ng</li>
-            <li>elden ring</li>
+            <li>Hack ng</li>
+            <li>Cheat ng</li>
+            <li>Elden Ring</li>
         </ul>
 
         <h3>Formulaire de contact</h3>
